@@ -1,0 +1,609 @@
+/*Author NIKHIL PANDEY mail:- "nikhilpandey.pandey9@gmail.com"*/
+
+body {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.spinner{
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+   
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#overlay-for-preloader{
+    opacity: 1;
+    height: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+
+    width: 100%;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    transition-duration: 1s;
+    z-index: 9999;
+ }
+
+a,h1,h2,h3,p,span{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* this changes the side scrollbar  */
+::-webkit-scrollbar {
+    width: 4px;
+}
+ 
+/* this change sthe track  */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+ 
+/* this changes the handle Handle */
+::-webkit-scrollbar-thumb {
+    background: #E91E63;
+
+}
+
+
+/* thes defines when it is inactive*/
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0,0,0,0.4); 
+}
+
+
+.menu {
+    float: left;
+    margin: 2px;
+    padding: 0px;
+    width: 20%;
+    background: #e91e6369;
+}
+
+.menu:hover {
+    background: #e91e63eb;
+}
+
+.menu:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+
+.overlay {
+     opacity: 0;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: -100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.67);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: block;
+    left: 59%;
+    transform: translate(-50%, -50%);
+    top: 57%;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #b0b0b0;
+    text-transform: uppercase;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    font-size: 45px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+
+.overlay2 {
+    opacity: 0;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    right: -100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.67);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content2 {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: block;
+    left: 59%;
+    transform: translate(-50%, -50%);
+    top: 57%;
+}
+
+.overlay2 a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #b0b0b0;
+    text-transform: uppercase;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay2 a:hover,
+.overlay2 a:focus {
+    color: #f1f1f1;
+}
+
+.overlay2 .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    z-index:  999;
+    font-size: 45px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay2 a {
+        font-size: 20px
+    }
+    .overlay2 .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.overlay3 {
+     opacity: 0;
+    height: 0vh;
+    width: 100%;
+    position: fixed;
+    z-index: 998;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.67);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content3 {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: block;
+    left: 59%;
+    transform: translate(-50%, -50%);
+    top: 57%;
+}
+
+.overlay3 a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #b0b0b0;
+    text-transform: uppercase;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay3 a:hover,
+.overlay3 a:focus {
+    color: #f1f1f1;
+}
+
+.overlay3 .closebtn {
+    position: absolute;
+    top: 88%;
+    right: 8px;
+    font-size: 45px;
+    z-index: 999;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay3 a {
+        font-size: 20px
+    }
+    .overlay3 .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+#home {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    transition-duration: 0.5s;
+}
+
+
+#home .home_animated {
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 200% 200%;
+
+}
+
+/* ---- particals.js ---- */
+
+#home #particles-js {
+    width: 100%;
+    height: 100vh;
+    display: table-cell;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition-duration: 0.5s;
+}
+
+#home #particles-js2 {
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    transition-duration: 0.5s;
+}
+
+
+.logo1 {
+    z-index: 99;
+    cursor: pointer;
+    position: absolute;
+    width: 13%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 0.5s;
+
+}
+
+.logo1:hover {
+    width: 16%;
+
+}
+
+
+.box {
+    transition-duration: 1s;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    transform: translate(-50%, -50%);
+}
+
+.large {
+    transition-duration: 0.5s;
+    width: 16%;
+    height: 25px;
+}
+
+.medium {
+    transition-duration: 0.6s;
+    width: 18%;
+    height: 15px;
+}
+
+.small {
+    transition-duration: 0.7s;
+    width: 20%;
+    height: 5px;
+}
+
+.tiny {
+    transition-duration: 0.8s;
+    width: 22%;
+    height: 0px;
+}
+
+
+
+
+
+
+#home .button {
+    position: absolute;
+    color: white;
+    padding: 13px 20px;
+    font-size: 20px;
+    margin: 10px 0px;
+    cursor: pointer;
+    outline: none;
+
+}
+
+#home .button:hover {
+    transition-duration: 0.5s;
+    background-color: #c34f8d;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.25);
+}
+
+#home .button2 {
+    position: absolute;
+    color: white;
+    right: 0px;
+    padding: 13px 20px;
+    font-size: 20px;
+    margin: 10px 0px;
+    cursor: pointer;
+    outline: none;
+
+}
+
+#home .button2:hover {
+    transition-duration: 0.5s;
+      background-color: #23accc;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.25);
+}
+
+#home .button3 {
+    top: 88%;
+    position: absolute;
+    color: white;
+    right: 0px;
+    padding: 13px 20px;
+    font-size: 20px;
+    margin: 10px 0px;
+    cursor: pointer;
+    outline: none;
+}
+
+#home .button3:hover {
+    transition-duration: 0.5s;
+    background-color: #4295c7;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.25);
+}
+
+#home .button4 {
+    bottom: -45px;
+    position: absolute;
+    color: white;
+    left: 15px;
+    padding-bottom: 20px;
+    font-size: 0px;
+    margin: 0px;
+    cursor: pointer;
+    outline: none;
+    transition-duration: 0.5s;
+}
+
+#home .button4:hover {
+    transition-duration: 0.5s;
+    bottom: 0px;
+}
+
+
+
+.top_logo {
+    width: 30%;
+    top: 10%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.box2 {
+    transition-duration: 1s;
+    cursor: pointer;
+    position: absolute;
+    width: 300px !important;
+    height: 300px !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dev_logo {
+    width: 40px;
+}
+
+
+
+
+
+
+/*updated media queries */
+
+/*UHD devices */
+
+@media (max-width: 1440px) {}
+
+/*HD devices laptops etc 16:9; */
+
+@media (max-width: 1024px) {}
+
+
+/*tablets */
+
+@media (max-width: 768px) {
+    
+    .top_logo {
+        width: 70%;
+        top: 25%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+
+    .logo1 {
+        width: 25%;
+    }
+    .logo1:hover {
+        width: 27%;
+    }
+
+    .menu {
+        float: left;
+        margin: 2px;
+        padding: 0px;
+        width: 40%;
+        background: #e91e6369;
+    }
+
+    .large {
+        transition-duration: 0.5s;
+        width: 30%;
+        height: 25px;
+    }
+    .medium {
+        transition-duration: 0.6s;
+        width: 33%;
+        height: 15px;
+    }
+
+    .small {
+        transition-duration: 0.7s;
+        width: 36%;
+        height: 5px;
+    }
+
+    .tiny {
+        transition-duration: 0.8s;
+        width: 39%;
+        height: 0px;
+    }
+
+    .overlay-content{
+        top: 63%;
+    }
+    
+    .overlay-content2{
+        top: 63%;
+    }
+    
+    .overlay-content3{
+        top: 63%;
+    }
+}
+
+
+/*large phone */
+
+@media (max-width: 425px) {}
+
+
+/*medium phone*/
+
+@media (max-width: 375px) {}
+
+
+/*small phone*/
+
+@media (max-width: 320px) {}
+
+
+
+
+/*media */
+
+@media (min-width: 800px) {}
+
+
+.timer-holder {
+    position: absolute;
+    bottom: -50px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+
+.timer {
+    font-size: 1.5em;
+}
+
+.preloader {
+    animation: spin 2s infinite linear;
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+.t {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition-duration: 0.5s;
+
+}
+
+.dev_text {
+   opacity: 0;
+    color: white;
+    padding-bottom: 0px;
+    margin: 0px;
+    cursor: pointer;
+    width: 84px;
+    outline: none;
+    font-size: 20px;
+    float: left;
+    position: absolute;
+    bottom: 10px;
+    left: 60px;
+    transition-duration: 0.6s;
+}
