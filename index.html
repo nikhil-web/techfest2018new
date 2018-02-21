@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+
+<!--Design and Developed by NIKHIL PANDEY mail:- "nikhilpandey.pandey9@gmail.com"-->
+<!--particals.js courtsy of "Vincent Garreau" -->
+<!--Website name : TECHFEST GLAU 2018-->
+
+<!--Woh Woh...Whatcha looking for? This design is not a theme,I have made it with my Blood,Sweat and javascript, find this code on my Git Repo
+here...-->
+
+
+
+<html lang="en">
+
+<head>
+
+    <title>Techfest</title>
+    <meta name="theme-color" content="#000000">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Nikhil Pandey" />
+
+    <link rel="icon" sizes="192x192" href="favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+
+    <!--Main stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="animate.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="overlay-for-preloader">
+
+        <div class="spinner">
+            <img id="spinner_hexagon" class="preloader" src="preloader.png" alt="preloaderpng">
+            <img id="fixed_t" class="t" src="t.png" alt="">
+        </div>
+    </div>
+    <script>
+        var overlay = document.getElementById("overlay-for-preloader");
+        var spinner = document.getElementById("spinner_hexagon");
+        var fixed_t = document.getElementById("fixed_t");
+
+        window.addEventListener('load', function() {
+            overlay.style.height = '0px';
+            spinner.style.opacity = '0';
+            fixed_t.style.opacity = '0';
+        });
+
+    </script>
+    <!--navigation-->
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; </a>
+        <div class="overlay-content">
+
+
+            <div class="menu item_1"></div>
+            <div class="menu item_2"></div>
+            <div class="menu item_3"></div>
+            <div class="menu item_4"></div>
+            <div class="menu item_5"></div>
+            <div class="menu item_3"></div>
+            <div class="menu item_4"></div>
+            <div class="menu item_5"></div>
+
+        </div>
+    </div>
+
+
+    <div id="myNav2" class="overlay2">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+        <div class="overlay-content2">
+
+
+            <div class="menu item_1"></div>
+            <div class="menu item_2"></div>
+            <div class="menu item_3"></div>
+            <div class="menu item_4"></div>
+            <div class="menu item_5"></div>
+            <div class="menu item_3"></div>
+            <div class="menu item_4"></div>
+            <div class="menu item_5"></div>
+
+        </div>
+    </div>
+
+    <div id="myNav3" class="overlay3">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
+        <div class="overlay-content3">
+
+
+            <div class="menu item_1"></div>
+            <div class="menu item_2"></div>
+            <div class="menu item_3"></div>
+            <div class="menu item_4"></div>
+            <div class="menu item_5"></div>
+            <div class="menu item_3"></div>
+            <div class="menu item_4"></div>
+            <div class="menu item_5"></div>
+
+        </div>
+    </div>
+
+    <!--Home-->
+
+
+    <div id="home">
+        <span class="button" onclick="openNav()">&#9776; Menu </span>
+        <span class="button2" onclick="openNav2()">Register &#9776; </span>
+        <span class="button3" onclick="openNav3()">Powerd By &#9776; </span>
+        <span id="dev_logo" class="button4"> <img class="dev_logo" src="devlogo.png" alt="">
+       
+        </span>
+         <div><h2 id="dev_text" class="dev_text">Developed By Nikhil</h2></div>
+
+        <div class="home_animated" id="particles-js">
+
+            <div class="home-logo ">
+                <img class="top_logo" src="tech.png" alt="">
+                <img id="main_logo" class="logo1" src="logow.png" alt="Imperial" onmouseover="change()" onmouseout="unchange()">
+
+
+                <div id="box1" class="box large"></div>
+                <div id="box2" class="box medium"></div>
+                <div id="box3" class="box small"></div>
+                <div id="box4" class="box tiny"></div>
+
+                <div id="particles-js2" class="box2"></div>
+
+
+            </div>
+            <div id="timer-holder" class="timer-holder">
+                <p id="timer" class="timer"></p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("dev_logo").addEventListener("mouseover", function myFunction() {
+            var devtext =document.getElementById("dev_text");
+            devtext.style.opacity = '0.7';
+            devtext.style.bottom='22px';
+
+        });
+        document.getElementById("dev_logo").addEventListener("mouseout", function myFunction() {
+            var devtext =document.getElementById("dev_text");
+            devtext.style.opacity = '0';
+            devtext.style.bottom='10px';
+
+        });
+
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.left = "0%";
+            document.getElementById("myNav").style.opacity = '1';
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.left = "-100%";
+            document.getElementById("muNav").style.opacity = '0';
+        }
+
+    </script>
+
+
+    <script>
+        function openNav2() {
+            document.getElementById("myNav2").style.right = "0%";
+            document.getElementById("myNav2").style.opacity = "1";
+        }
+
+        function closeNav2() {
+            document.getElementById("myNav2").style.right = "-100%";
+            document.getElementById("myNav2").style.opacity = "0";
+        }
+
+    </script>
+
+    <script>
+        function openNav3() {
+            document.getElementById("myNav3").style.height = "100vh";
+            document.getElementById("myNav3").style.opacity = '1';
+        }
+
+        function closeNav3() {
+            document.getElementById("myNav3").style.height = "0vh";
+            document.getElementById("myNav3").style.opacity = '0';
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        var distance;
+        var scrw = screen.width;
+
+        if (scrw < 800) {
+            distance = 30;
+        } else {
+            distance = 16;
+        }
+        console.log(scrw);
+        console.log(distance);
+
+
+        function change() {
+            var x = document.getElementById('particles-js');
+            x.style.backgroundSize = " 100% 100%";
+
+            var line1 = document.getElementById('box1');
+            var line2 = document.getElementById('box2');
+            var line3 = document.getElementById('box3');
+            var line4 = document.getElementById('box4');
+
+
+
+            line1.style.width = distance + 2 + "%";
+            line1.style.height = "80px";
+            line2.style.width = distance + 4 + "%";
+            line2.style.height = "60px";
+            line3.style.width = distance + 6 + "%";
+            line3.style.height = "40px";
+            line4.style.width = distance + 8 + "%";
+            line4.style.height = "20px";
+        }
+
+        function unchange() {
+            var x = document.getElementById('particles-js');
+            x.style.backgroundSize = " 200% 200%";
+            var line1 = document.getElementById('box1');
+            var line2 = document.getElementById('box2');
+            var line3 = document.getElementById('box3');
+            var line4 = document.getElementById('box4');
+            line1.style.width = distance + "%";
+            line1.style.height = "60px";
+            line2.style.width = distance + 2 + "%";
+            line2.style.height = "40px";
+            line3.style.width = distance + 4 + "%";
+            line3.style.height = "20px";
+            line4.style.width = distance + 6 + "%";
+            line4.style.height = "0px";
+
+        }
+
+    </script>
+
+
+
+    <script>
+        $('#navigation li a').on('click', function() {
+            $('li a.current').removeClass('current');
+            $(this).addClass('current');
+        });
+
+    </script>
+
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Nov 5, 2018 0:0:0").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+    </script>
+
+
+
+
+
+
+    <!-- scripts -->
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+
+
+</body>
+
+</html>
